@@ -50,7 +50,7 @@ os.environ['NUMEXPR_NUM_THREADS'] = '1'
 
 #%%
 
-data_all = pd.read_csv("D:/clases/UDES/articulo Carlos UniAndes/royal_society/ci/data.csv", encoding='latin-1')
+data_all = pd.read_csv("D:/data.csv", encoding='latin-1')
 
 data_all = data_all.dropna()
 

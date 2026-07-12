@@ -9,7 +9,7 @@ library(spdep)
 # ------------------------------------------------------------
 # 1) DATA (RAW)
 # ------------------------------------------------------------
-obs_exp <- read.csv("D:/clases/UDES/articulo Carlos UniAndes/royal_society/ci/data.csv")
+obs_exp <- read.csv("D:/data.csv")
 
 obs_exp$DANE <- as.character(obs_exp$DANE)
 obs_exp$period <- as.character(obs_exp$period)
@@ -17,7 +17,7 @@ obs_exp$period <- as.character(obs_exp$period)
 # ------------------------------------------------------------
 # 2) SHAPEFILE AND GRAPH (ORIGINAL)
 # ------------------------------------------------------------
-shp <- st_read("D:/clases/UDES/articulo Carlos UniAndes/royal_society/ci/map/Col.shp",
+shp <- st_read("D:/map/Col.shp",
                quiet = TRUE)
 shp <- st_make_valid(shp)
 shp$DANE <- as.character(shp$DANE)
@@ -205,7 +205,7 @@ cat("Matches:", sum(!is.na(obs_exp_updated$SIR_mean)), "\n")
 # 10) SAVE UPDATED DATA
 # ------------------------------------------------------------
 write.csv(obs_exp_updated, 
-          "D:/clases/UDES/articulo Carlos UniAndes/royal_society/ci/data.csv", 
+          "D:/data.csv", 
           row.names = FALSE)
 
 cat("Results saved to data.csv with new variables:\n")

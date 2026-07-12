@@ -44,7 +44,7 @@ warnings.filterwarnings('ignore')
 import pandas as pd
 
 # Path to the file in Google Drive
-file_path = 'D:/clases/UDES/articulo Carlos UniAndes/royal_society/ci/data.csv'  # Adjust the path if it is in a folder
+file_path = 'D:/data.csv'  # Adjust the path if it is in a folder
 data_all = pd.read_csv(file_path, encoding='latin-1')
 
 data_all = data_all.dropna()
